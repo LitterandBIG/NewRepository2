@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>moment</title>
+</head>
+<body>
+<div>
+    {{ public_time }}
+    {{ moment(public_time).format('LLLL') }}
+</div>
+{# moment.js依赖于jquery #}
+{{ moment.include_jquery }}
+{# 加载moment.js #}
+{{ moment.include_moment() }}
+
+{{ moment.locale('zh-CN') }}
+</body>
+</html>
